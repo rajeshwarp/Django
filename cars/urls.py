@@ -1,7 +1,9 @@
 from django.urls import path
-from . import views
+from .views import rental_review,thank_you
+
+app_name = 'cars'
 
 urlpatterns = [
-    path('rental_review/',views.rental_review, name='rental_review'),
-    path('thank_you/',views.thank_you, name='thank_you'),
+    path('rental_review/',rental_review, name='rental_review'),
+    path('thank_you/',thank_you, name='thank_you'),
 ]

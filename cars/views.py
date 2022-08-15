@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
-from . forms import ReviewFrom
+from django.shortcuts import render,redirect
 from django.urls import reverse
+from .forms import ReviewFrom
 
 # Create your views here.
 def rental_review(request):
     if request.method == 'POST':
-     form=ReviewFrom(request.POST)
+     form = ReviewFrom(request.POST)
      if form.is_valid():
         print(form.cleaned_data)
         return redirect(reverse('cars:thank_you'))

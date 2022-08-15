@@ -13,8 +13,6 @@
     <h2>FORM BELOW</h2>
     <div class='container'>
     <form method="POST">
-        <!-- https://docs.djangoproject.com/en/4.0/topics/forms/ -->
-        <!-- https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually -->
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit">
